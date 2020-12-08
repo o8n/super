@@ -1,0 +1,55 @@
+current directory: /Users/m_okamoto/20dev/super/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
+/Users/m_okamoto/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201209-43199-lv70qj.rb extconf.rb
+checking for ffi_call() in -lffi... yes
+checking for ffi_closure_alloc()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for shlwapi.h... no
+checking for ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+checking for ffi_prep_cif_var()... yes
+creating extconf.h
+creating Makefile
+
+current directory: /Users/m_okamoto/20dev/super/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /Users/m_okamoto/20dev/super/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR="
+compiling AbstractMemory.c
+compiling ArrayType.c
+compiling Buffer.c
+compiling Call.c
+compiling ClosurePool.c
+compiling DataConverter.c
+compiling DynamicLibrary.c
+compiling Function.c
+compiling FunctionInfo.c
+compiling LastError.c
+compiling LongDouble.c
+compiling MappedType.c
+compiling MemoryPointer.c
+compiling MethodHandle.c
+compiling Platform.c
+compiling Pointer.c
+compiling Struct.c
+compiling StructByReference.c
+compiling StructByValue.c
+compiling StructLayout.c
+compiling Thread.c
+compiling Type.c
+compiling Types.c
+compiling Variadic.c
+Variadic.c:240:17: error: implicit declaration of function 'ffi_prep_cif_var' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    ffiStatus = ffi_prep_cif_var(&cif, invoker->abi, fixedCount, paramCount, ffiReturnType, ffiParamTypes);
+                ^
+Variadic.c:240:17: note: did you mean 'ffi_prep_cif'?
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/ffi/ffi.h:312:1: note: 'ffi_prep_cif' declared here
+ffi_prep_cif(
+^
+1 error generated.
+make: *** [Variadic.o] Error 1
+
+make failed, exit code 2
